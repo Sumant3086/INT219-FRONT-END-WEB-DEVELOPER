@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Spinner</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .spinner-border {
+        display: none;
+    }
+    .loading {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Loading spinner -->
+<div class="loading" id="loading">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div>Loading...</div>
+</div>
+
+<!-- Content -->
+<div class="container mt-5">
+    <h2>Page Content</h2>
+    <p>This is the content of the page.</p>
+</div>
+
+<script>
+    // Simulate loading state
+    document.addEventListener("DOMContentLoaded", function(event) {
+        // Show loading spinner
+        document.getElementById("loading").style.display = "block";
+
+        // Simulate data loading delay
+        setTimeout(function() {
+            // Hide loading spinner after 3 seconds (simulating data loading)
+            document.getElementById("loading").style.display = "none";
+        }, 3000);
+    });
+</script>
+
+</body>
+</html>

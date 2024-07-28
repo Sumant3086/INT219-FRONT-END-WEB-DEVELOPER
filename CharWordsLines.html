@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Analyzer</title>
+</head>
+<body>
+    <h1>Text Analyzer</h1>
+    <textarea id="textInput" rows="5" cols="50"></textarea><br>
+    <button onclick="analyzeText()">Submit</button>
+
+    <script>
+        function analyzeText() {
+            var textInput = document.getElementById("textInput").value;
+
+            // Counting characters
+            var charCount = textInput.length;
+
+            // Counting words (splitting by whitespace)
+            var wordCount = textInput.split(/\s+/).filter(function(word) {
+                return word.length > 0;
+            }).length;
+
+            // Counting lines (splitting by new line character)
+            var lineCount = textInput.split(/\n/).filter(function(line) {
+                return line.trim().length > 0;
+            }).length;
+
+            // Displaying results in an alert message
+            alert("Number of Characters: " + charCount + "\nNumber of Words: " + wordCount + "\nNumber of Lines: " + lineCount);
+        }
+    </script>
+</body>
+</html>

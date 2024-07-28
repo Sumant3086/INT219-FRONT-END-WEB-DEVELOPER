@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert Text to JavaScript Object</title>
+</head>
+<body>
+    <h1>Text to JavaScript Object</h1>
+    <div id="output"></div>
+
+    <script>
+        // Given text
+        var text = "John is 30 city New York";
+
+        // Split the text into an array of words
+        var words = text.split(" ");
+
+        // Create an object with properties
+        var person = {
+            name: words[0],
+            age: parseInt(words[2]),
+            city: words.slice(4).join(" ")
+        };
+
+        // Display the object on the web page
+        var outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "<pre>" + JSON.stringify(person, null, 2) + "</pre>";
+    </script>
+</body>
+</html>

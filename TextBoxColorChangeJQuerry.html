@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Textbox Color Change and Content Insertion with jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Text box color change
+        $("#changeColorButton").click(function(){
+            $("#myTextBox").css("background-color", "#ffcc00");
+        });
+
+        // Content insertion
+        $("#appendButton").click(function(){
+            $("#content").append("<p>This text was appended.</p>");
+        });
+
+        $("#prependButton").click(function(){
+            $("#content").prepend("<p>This text was prepended.</p>");
+        });
+
+        $("#beforeButton").click(function(){
+            $("#content").before("<p>This text was inserted before the content.</p>");
+        });
+
+        $("#afterButton").click(function(){
+            $("#content").after("<p>This text was inserted after the content.</p>");
+        });
+    });
+</script>
+</head>
+<body>
+
+<h2>Textbox Color Change</h2>
+<input type="text" id="myTextBox">
+<button id="changeColorButton">Change Color</button>
+
+<h2>Content Insertion</h2>
+<div id="content">
+    <p>This is the initial content.</p>
+</div>
+<button id="appendButton">Append</button>
+<button id="prependButton">Prepend</button>
+<button id="beforeButton">Before</button>
+<button id="afterButton">After</button>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Forecast</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Weather Forecast</h2>
+<div id="weatherForecast"></div>
+
+<script>
+    // Function to fetch weather data and generate forecast table
+    function fetchWeatherForecast(city) {
+        const apiKey = '000929083fc5c243588a63b748dfc350';
+        const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const forecastData = data.list;
+
+                // Generate forecast table
+                const table = document.createElement('table');
+                const headerRow = table.insertRow();
+                const headers = ['Day', 'Temperature (°C)', 'Weather Condition'];
+                headers.forEach(headerText => {
+                    const th = document.createElement('th');
+                    th.textContent = headerText;
+                    headerRow.appendChild(th);
+                });
+
+                forecastData.forEach(forecast => {
+                    const { dt_txt, main, weather } = forecast;
+                    const row = table.insertRow();
+                    const date = new Date(dt_txt);
+                    const day = date.toLocaleDateString('en', { weekday: 'long' });
+                    const temp = main.temp;
+                    const weatherCondition = weather[0].description;
+
+                    [day, temp, weatherCondition].forEach((data, index) => {
+                        const cell = row.insertCell(index);
+                        cell.textContent = data;
+                    });
+                });
+
+                document.getElementById('weatherForecast').appendChild(table);
+            })
+            .catch(error => console.error('Error fetching weather data:', error));
+    }
+
+    // Fetch weather forecast for a specific city (e.g., London)
+    fetchWeatherForecast('London');
+</script>
+
+</body>
+</html>

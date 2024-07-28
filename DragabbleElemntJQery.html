@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+    #draggable {
+        width: 100px;
+        height: 100px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        cursor: move;
+    }
+    #droppable {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #ccc;
+        margin-top: 20px;
+    }
+    .message {
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div id="draggable" class="ui-widget-content">
+    Drag me
+</div>
+
+<div id="droppable" class="ui-widget-header">
+    Drop here
+</div>
+
+<div id="message" class="message"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable({
+            drop: function() {
+                $( this ).addClass( "ui-state-highlight" );
+                showMessage("Element dropped into the target area!");
+            }
+        });
+    });
+
+    function showMessage(message) {
+        $("#message").text(message);
+    }
+</script>
+
+</body>
+</html>

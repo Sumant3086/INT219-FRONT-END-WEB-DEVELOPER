@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	DispalyOmrSheet
+</title>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        $('[id*=GridView1]').footable();
+    });
+</script>
+<style>
+        body
+        {
+         background-color:#fcfbf4;
+        }
+    </style>
+</head>
+<body style=" opacity: 2;filter: alpha(opacity=50); border-image-width:initial" />
+<form method="post" action="./frmDispalyOmrSheet.aspx?RegistrationNumber=%2bU1Sego8D9uYv4XEuzByRw%3d%3d&amp;id=4c551163-5dd2-47ff-9c68-4e01b0e7c2db" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZOx5O__Qx1j5TJkeF6L59E_IWIEX7TrTPRP5n91PD2c4bZd-2kygeAt8jNsdejju1w2&amp;t=637750992597106394" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvqBS0m0GzEl7iMK8XVvKYp5uKEmg4GHQG7I-mEAYRrHfGtJS6efFlfU-ji2kUX4pKujhx5c6uCCCrouBVtwUq_WNnQVUk8KTmiLfismr3eA1xy72CwmG71XoAH-jSFJWiqGp720JmM1OScZWHPWqNfk1&amp;t=ffffffff8333b97c" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OFj0EL_kLftziXy-T6knWX2sJn1daOGfVRoCXWpWCJW78x_Iy9ZZaapVvlUWeeVjP80mcS2U1nmpvHAzak97uWlss8QkR7bNEAEwUD3ncQ5uhCs5snXPaFBkaHIW86jwsxtpoC4Gtk0uvNl4ZUxLhUI1&amp;t=ffffffff8333b97c" type="text/javascript"></script>
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="16998C1B" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="LguvOPwxJy/HXaOk/cwXJ5H2WyLXopPOhkipjvd1wTeeuK8vN9o0828RF0sL5+GyVdxpQ1LTBNqAJs4YfqVGQrFhSGOv5wACyxVHNwO0nXBT2MMHk6f9EZreyqovM81R6dN9E9FAMUHLQMGywFVE8XkHrC7ZbyhEfYzdc2GD99VNl9TX05Hthxewhhzi8A0Uc2i0QFsx4YshmAZswq0Ov6b75wJ7Lo4OlIoMgqyBWZCCz7JN2+ZXDzWQtV5OXiAFQm01JtB8lAihpz4Fl427wQ==" />
+</div>
+<div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager2', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+<div class="modal-header" style="background-color:#2196F3;height:100px"><span style="float:left"><img src="images/logo.png" /><span style="margin:0 auto" "></span><img src="images/ums.png" /><span style="float:right"><input type="submit" name="ctl00$cphHeading$ctl00" value="Home" class="active" style="float:right" /></span></div>
+<div class="container">
+<div class="row">
+<div class="col-md-6" style="margin:0 auto;margin-left:25%">
+<div class="alert alert-success" style="display:none;">
+<span class="glyphicon glyphicon-ok"></span> Drag table row and cange Order</div>
+<table class="table table-striped table-bordered table-hover table-condensed">
+<thead>
+<tr>
+<th colspan="2" style="text-align:center" class="table-hover">
+Display OMR Sheet
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="active">
+<td>
+<span id="cphHeading_Label1">TermId ::</span>
+</td>
+<td>
+<select name="ctl00$cphHeading$ddlTermId" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphHeading$ddlTermId\&#39;,\&#39;\&#39;)&#39;, 0)" id="cphHeading_ddlTermId" style="width:190px;">
+<option value="">Select</option>
+<option selected="selected" value="22231">22231</option>
+</select>
+</td>
+</tr>
+<tr class="success">
+<td>
+<span id="cphHeading_Label2">Course Code ::</span>
+</td>
+<td>
+<select name="ctl00$cphHeading$ddlCourseCode" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphHeading$ddlCourseCode\&#39;,\&#39;\&#39;)&#39;, 0)" id="cphHeading_ddlCourseCode" style="width:190px;">
+<option value="">Select</option>
+<option selected="selected" value="MTH174">MTH174</option>
+<option value="PHY110">PHY110</option>
+</select>
+</td>
+</tr>
+<tr class="active">
+<td>
+<span id="cphHeading_Label3">ExamType ::</span>
+</td>
+<td>
+<select name="ctl00$cphHeading$ddlExamType" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$cphHeading$ddlExamType\&#39;,\&#39;\&#39;)&#39;, 0)" id="cphHeading_ddlExamType" style="width:190px;">
+<option value="">Select</option>
+<option selected="selected" value="30">Objective Type Mid Term</option>
+</select>
+</td>
+</tr>
+<tr class="success">
+<td>
+<span id="cphHeading_Label4">RegdNO ::</span>
+<span id="cphHeading_lblRegdNO">12201495</span>
+</td>
+<td>
+<span id="cphHeading_Label6">ExamDate ::</span>
+<span id="cphHeading_lblExamDate">17 Oct 2022</span>
+</td>
+</tr>
+<tr class="active">
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr class="success">
+<td><span id="cphHeading_Label10">ExamTiming ::</span>
+<span id="cphHeading_lblExamTiming">09:30-11:00</span>
+</td>
+<td>
+<span id="cphHeading_Label8">SetCode ::</span>
+<span id="cphHeading_lblSetCode">A</span>
+</td>
+</tr>
+<tr class="active">
+<td>
+</td>
+<td>
+</td>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+        //(function ($) {
+        //    $.fn.extend({
+        //        tableAddCounter: function (options) {
+
+        //            // set up default options 
+        //            var defaults = {
+        //                title: '#',
+        //                start: 1,
+        //                id: false,
+        //                cssClass: false
+        //            };
+
+        //            // Overwrite default options with user provided
+        //            var options = $.extend({}, defaults, options);
+
+        //            return $(this).each(function () {
+        //                // Make sure this is a table tag
+        //                if ($(this).is('table')) {
+
+        //                    // Add column title unless set to 'false'
+        //                    if (!options.title) options.title = '';
+        //                    $('th:first-child, thead td:first-child', this).each(function () {
+        //                        var tagName = $(this).prop('tagName');
+        //                        $(this).before('<' + tagName + ' rowspan="' + $('thead tr').length + '" class="' + options.cssClass + '" id="' + options.id + '">' + options.title + '</' + tagName + '>');
+        //                    });
+
+        //                    // Add counter starting counter from 'start'
+        //                    $('tbody td:first-child', this).each(function (i) {
+        //                        $(this).before('<td>' + (options.start + i) + '</td>');
+        //                    });
+
+        //                }
+        //            });
+        //        }
+        //    });
+        //})(jQuery);
+
+        $(document).ready(function () {
+            $('.table').tableAddCounter();
+            $.getScript("http://code.jquery.com/ui/1.9.2/jquery-ui.js").done(function (script, textStatus) { $('tbody').sortable(); $(".alert-info").alert('close'); $(".alert-success").show(); });
+        });
+</script>
+<table id="cphHeading_omrtb" class="table table-striped table-bordered table-hover table-condensed">
+<tr>
+<td style="vertical-align:top ; width:80%"> <div id="cphHeading_Panel1" style="height:750px;overflow-y:scroll;">
+<img id="cphHeading_Image1" src="https://omrsheets.lpu.in/OmrDisplay/umsweb/OMRSheets/RSheet_1262_3022231081641.jpg" style="height:100%;width:100%;" />
+</div> </td>
+<td style="vertical-align:top ; width:20%"> <div id="cphHeading_Panel2" style="height:750px;overflow-y:scroll;">
+<div>
+<table cellspacing="0" cellpadding="3" rules="cols" id="cphHeading_gvData" style="color:Black;background-color:White;border-color:#999999;border-width:1px;border-style:Solid;border-collapse:collapse;">
+<tr style="color:White;background-color:Black;font-weight:bold;">
+<th scope="col">Question No.</th><th scope="col">Answer Key</th><th scope="col">Student Ans.</th><th scope="col">Marks</th><th scope="col">Discrepancy</th>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_0">1</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_0">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_0">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_0">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_0"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_1">2</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_1">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_1">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_1">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_1"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_2">3</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_2">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_2">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_2">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_2"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_3">4</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_3">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_3">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_3">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_3"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_4">5</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_4">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_4">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_4">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_4"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_5">6</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_5">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_5">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_5">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_5"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_6">7</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_6">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_6">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_6">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_6"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_7">8</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_7">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_7">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_7">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_7"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_8">9</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_8">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_8">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_8">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_8"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_9">10</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_9">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_9">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_9">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_9"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_10">11</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_10">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_10">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_10">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_10"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_11">12</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_11">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_11">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_11">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_11"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_12">13</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_12">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_12">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_12">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_12"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_13">14</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_13">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_13">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_13">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_13"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_14">15</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_14">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_14">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_14">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_14"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_15">16</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_15">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_15">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_15">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_15"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_16">17</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_16">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_16">B</span>
+</td><td>
+ <span id="cphHeading_gvData_lblmarks_16">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_16"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_17">18</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_17">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_17">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_17">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_17"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_18">19</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_18">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_18">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_18">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_18"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_19">20</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_19">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_19">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_19">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_19"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_20">21</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_20">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_20">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_20">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_20"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_21">22</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_21">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_21">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_21">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_21"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_22">23</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_22">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_22">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_22">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_22"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_23">24</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_23">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_23">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_23">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_23"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_24">25</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_24">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_24">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_24">1.00</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_24"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_25">26</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_25">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_25">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_25">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_25"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_26">27</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_26">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_26">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_26">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_26"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_27">28</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_27">A</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_27">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_27">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_27"></span>
+</td>
+</tr><tr class="footable" align="center">
+<td>
+<span id="cphHeading_gvData_lblQNo_28">29</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_28">D</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_28">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_28">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_28"></span>
+</td>
+</tr><tr class="footable" align="center" style="background-color:#CCCCCC;">
+<td>
+<span id="cphHeading_gvData_lblQNo_29">30</span>
+</td><td>
+<span id="cphHeading_gvData_lblAnswer_29">B</span>
+</td><td>
+<span id="cphHeading_gvData_lblStudentAns_29">C</span>
+</td><td>
+<span id="cphHeading_gvData_lblmarks_29">-0.25</span>
+</td><td>
+<span id="cphHeading_gvData_lblDiscrepency_29"></span>
+</td>
+</tr>
+</table>
+ </div>
+</div>
+</td></tr>
+</table>
+</div> </td>
+</tr>
+</table>
+<div class="footer" style="height:100px;background-color:#2196F3;margin-top:170px" /></div>
+</div>
+</form>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"77cab49bac187956","token":"c5db119ec2de4adc8b8b1d95388884a3","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

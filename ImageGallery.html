@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Add your CSS styles here if needed */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <div class="gallery">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <!-- Add more images here if needed -->
+  </div>
+  <div class="overlay" id="overlay">
+    <span class="close" id="close">&times;</span>
+    <img src="" alt="" id="overlay-image">
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    // Get the gallery container
+var galleryContainer = document.querySelector('.gallery');
+
+// Get the overlay element
+var overlay = document.getElementById('overlay');
+
+// Get the overlay image element
+var overlayImage = document.getElementById('overlay-image');
+
+// Get the close button
+var closeButton = document.getElementById('close');
+
+// Add event listener to each image in the gallery
+galleryContainer.addEventListener('click', function(event) {
+  if (event.target.tagName === 'IMG') {
+    var src = event.target.src;
+    overlayImage.src = src;
+    overlay.style.display = 'block';
+  }
+});
+
+// Add event listener to close button
+closeButton.addEventListener('click', function() {
+  overlay.style.display = 'none';
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Functions with Popup Boxes</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Button to display date -->
+  <button class="btn btn-primary" onclick="displayDate()">Display Date</button>
+  <input type="text" id="dateInput" readonly>
+
+  <br><br>
+
+  <!-- Button to calculate factorial -->
+  <button class="btn btn-secondary" onclick="calculateFactorial()">Calculate Factorial</button>
+
+  <br><br>
+
+  <!-- Button to display multiplication table -->
+  <button class="btn btn-success" onclick="displayMultiplicationTable()">Display Multiplication Table</button>
+
+  <!-- JavaScript functions -->
+  <script>
+    // Function to display current date
+    function displayDate() {
+      const currentDate = new Date().toLocaleDateString();
+      document.getElementById('dateInput').value = currentDate;
+    }
+
+    // Function to calculate factorial
+    function calculateFactorial() {
+      const n = parseInt(prompt("Enter a number:"));
+      if (isNaN(n) || n < 0) {
+        alert("Please enter a valid non-negative number.");
+        return;
+      }
+      let factorial = 1;
+      for (let i = 1; i <= n; i++) {
+        factorial *= i;
+      }
+      alert("Factorial of " + n + " is " + factorial);
+    }
+
+    // Function to display multiplication table
+    function displayMultiplicationTable() {
+      const n = parseInt(prompt("Enter a number:"));
+      if (isNaN(n)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+      let table = "";
+      for (let i = 1; i <= 10; i++) {
+        table += n + " x " + i + " = " + (n * i) + "\n";
+      }
+      alert("Multiplication Table of " + n + ":\n" + table);
+    }
+  </script>
+</body>
+</html>

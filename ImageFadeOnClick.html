@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade Away Image</title>
+  <style>
+    #myImage {
+      transition: opacity 1s;
+    }
+  </style>
+</head>
+<body>
+  <img id="myImage" src="image.jpg" alt="Fading Image" onclick="fadeOut()">
+
+  <script>
+    function fadeOut() {
+      var image = document.getElementById("myImage");
+      image.style.opacity = "0";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enable Submit Button with Checkbox</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="checkbox" id="agreeCheckbox"> I agree<br><br>
+<button id="submitButton" disabled>Submit</button>
+
+<script src="script.js"></script>
+<script>
+    $(document).ready(function() {
+  // Add change event listener to the checkbox
+  $('#agreeCheckbox').change(function() {
+    // Check if the checkbox is checked
+    if ($(this).is(':checked')) {
+      // If checked, enable the submit button
+      $('#submitButton').prop('disabled', false);
+    } else {
+      // If not checked, disable the submit button
+      $('#submitButton').prop('disabled', true);
+    }
+  });
+});
+
+</script>
+</body>
+</html>

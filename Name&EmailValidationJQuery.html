@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Validation Form</title>
+<style>
+  .error {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<h2>Email Validation Form</h2>
+
+<form id="emailForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <span id="emailError" class="error"></span><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get the email input value
+    const email = document.getElementById('email').value;
+
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Check if the email matches the regular expression
+    if (emailRegex.test(email)) {
+      // Email is valid
+      document.getElementById('emailError').textContent = ''; // Clear error message
+      alert('Email is valid: ' + email);
+    } else {
+      // Email is not valid
+      document.getElementById('emailError').textContent = 'Please enter a valid email address';
+    }
+  });
+</script>
+
+</body>
+</html>

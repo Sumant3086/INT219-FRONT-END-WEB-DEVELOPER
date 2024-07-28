@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Capitals</title>
+<style>
+    /* Custom CSS for font properties */
+    .capital {
+        font-weight: bold;
+        font-size: 16px;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+    <h1>Select a Country to See Its Capital</h1>
+    <select id="countrySelect" onchange="showCapital()">
+        <option value="">Select a Country</option>
+        <option value="USA">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="Japan">Japan</option>
+    </select>
+    <p>Capital: <span id="capital" class="capital"></span></p>
+
+    <script>
+        function showCapital() {
+            var countrySelect = document.getElementById("countrySelect");
+            var capitalSpan = document.getElementById("capital");
+            var selectedCountry = countrySelect.value;
+
+            // Object containing country-capital pairs
+            var capitals = {
+                "USA": "Washington, D.C.",
+                "UK": "London",
+                "France": "Paris",
+                "Germany": "Berlin",
+                "Japan": "Tokyo"
+            };
+
+            // Set capital text based on selected country
+            if (capitals[selectedCountry]) {
+                capitalSpan.textContent = capitals[selectedCountry];
+            } else {
+                capitalSpan.textContent = ""; // Clear capital if no country selected
+            }
+        }
+    </script>
+</body>
+</html>

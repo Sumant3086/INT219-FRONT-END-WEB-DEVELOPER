@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Example</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // JSON Object
+    var person = {
+      "name": "John",
+      "age": 30,
+      "city": "New York"
+    };
+
+    // JSON Array
+    var colors = ["Red", "Green", "Blue"];
+
+    // JSON String
+    var jsonString = '{"name": "Alice", "age": 25, "city": "Los Angeles"}';
+
+    // Accessing JSON Object properties
+    document.getElementById("output").innerHTML += "Name: " + person.name + "<br>";
+    document.getElementById("output").innerHTML += "Age: " + person.age + "<br>";
+    document.getElementById("output").innerHTML += "City: " + person.city + "<br>";
+
+    // Iterating through JSON Array
+    document.getElementById("output").innerHTML += "<br>Colors:<br>";
+    for(var i = 0; i < colors.length; i++) {
+      document.getElementById("output").innerHTML += colors[i] + "<br>";
+    }
+
+    // Parsing JSON String
+    var parsedJson = JSON.parse(jsonString);
+    document.getElementById("output").innerHTML += "<br>Parsed JSON String:<br>";
+    document.getElementById("output").innerHTML += "Name: " + parsedJson.name + "<br>";
+    document.getElementById("output").innerHTML += "Age: " + parsedJson.age + "<br>";
+    document.getElementById("output").innerHTML += "City: " + parsedJson.city + "<br>";
+  </script>
+</body>
+</html>

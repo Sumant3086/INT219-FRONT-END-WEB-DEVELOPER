@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<button id="startButton">Start</button>
+<button id="stopButton">Stop</button>
+
+<script src="script.js"></script>
+<script>
+    // Initialize variables
+var countdown;
+var isCountdownRunning = false;
+
+// Function to start countdown
+function startCountdown() {
+  if (!isCountdownRunning) {
+    isCountdownRunning = true;
+    countdown = 9;
+    countdownTimer();
+  }
+}
+
+// Function to stop countdown
+function stopCountdown() {
+  if (isCountdownRunning) {
+    var confirmStop = confirm("Do you want to stop the countdown?");
+    if (confirmStop) {
+      clearInterval(timer);
+      isCountdownRunning = false;
+      alert("Countdown stopped.");
+    }
+  }
+}
+
+// Function to display countdown
+function countdownTimer() {
+  var timer = setInterval(function() {
+    if (countdown > 0) {
+      console.log(countdown);
+      countdown--;
+    } else {
+      clearInterval(timer);
+      isCountdownRunning = false;
+      alert("Entering into the game!");
+    }
+  }, 1000);
+}
+
+// Add event listeners for start and stop buttons
+document.getElementById("startButton").addEventListener("click", startCountdown);
+document.getElementById("stopButton").addEventListener("click", stopCountdown);
+
+</script>
+</body>
+</html>

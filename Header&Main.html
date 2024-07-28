@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Web Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .content {
+        padding: 20px;
+    }
+    .list-group-item {
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Header</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="content">
+                <h2>List of Items</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Item 1</li>
+                    <li class="list-group-item">Item 2</li>
+                    <li class="list-group-item">Item 3</li>
+                    <li class="list-group-item">Item 4</li>
+                    <li class="list-group-item">Item 5</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="content">
+                <h2>Details</h2>
+                <p>Select an item from the list to see details.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".list-group-item").click(function(){
+            $(".list-group-item").removeClass("active");
+            $(this).addClass("active");
+            var itemText = $(this).text();
+            $(".content").eq(1).html("<h2>Details</h2><p>Details of " + itemText + ".</p>");
+        });
+    });
+</script>
+</body>
+</html>

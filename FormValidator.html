@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Registration Form</h2>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter your password">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" class="form-control" id="phoneNumber" placeholder="Enter your phone number">
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+
+
+<script>
+function validateForm() {
+    // Get form inputs
+    var firstName = document.getElementById('firstName').value.trim();
+    var password = document.getElementById('password').value;
+    var email = document.getElementById('email').value.trim();
+    var phoneNumber = document.getElementById('phoneNumber').value.trim();
+    var address = document.getElementById('address').value.trim();
+  
+    // Validate first name
+    if (firstName.length < 6 || !/^[a-zA-Z]+$/.test(firstName)) {
+      alert('First name should contain alphabets and be at least 6 characters long.');
+      return false;
+    }
+  
+    // Validate password
+    if (password.length < 6) {
+      alert('Password should be at least 6 characters long.');
+      return false;
+    }
+  
+    // Validate email
+    if (!/\S+@gmail\.com$/.test(email)) {
+    alert('Email should be a valid Gmail address.');
+    return false;
+  }
+  
+    // Validate phone number
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      alert('Phone number should contain 10 digits only.');
+      return false;
+    }
+  
+    // Validate address
+    if (address === '') {
+      alert('Address should not be empty.');
+      return false;
+    }
+  
+    // All validations passed
+    alert('Registration successful!');
+    return true;
+  }
+  
+  </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emotion Selector</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    /* Add your CSS styles here if needed */
+.buttons {
+  margin-bottom: 20px;
+}
+
+.happy {
+  background-color: #FFD700; /* Yellow */
+}
+
+.sad {
+  background-color: #87CEEB; /* Light Blue */
+}
+
+.angry {
+  background-color: #FF6347; /* Tomato */
+}
+
+</style>
+</head>
+<body>
+
+<h2>Emotion Selector</h2>
+
+<div class="buttons">
+  <button id="happyButton" class="happy">Happy</button>
+  <button id="sadButton" class="sad">Sad</button>
+  <button id="angryButton" class="angry">Angry</button>
+</div>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+<script>
+    // Function to handle happy emotion
+function handleHappy() {
+  document.body.style.backgroundColor = '#FFFF00'; // Change background color to yellow
+  document.getElementById("result").innerText = "You're feeling happy!";
+}
+
+// Function to handle sad emotion
+function handleSad() {
+  // Array of random funny jokes
+  var jokes = [
+    "Why couldn't the bicycle stand up by itself? Because it was two-tired!",
+    "What do you call fake spaghetti? An impasta!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field!",
+    "What do you call cheese that isn't yours? Nacho cheese!",
+    "Why don't skeletons fight each other? They don't have the guts!",
+    "What did one plate say to the other plate? Dinner's on me!"
+  ];
+  
+  // Get a random joke from the array
+  var randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+  
+  alert("Here's a funny joke for you:\n\n" + randomJoke);
+}
+
+// Function to handle angry emotion
+function handleAngry() {
+  var countdown = 10;
+  var timer = setInterval(function() {
+    if (countdown > 0) {
+      console.log(countdown);
+      countdown--;
+    } else {
+      clearInterval(timer);
+      alert("Countdown complete! You're still angry?");
+    }
+  }, 1000);
+}
+
+// Add event listeners to buttons
+document.getElementById("happyButton").addEventListener("click", handleHappy);
+document.getElementById("sadButton").addEventListener("click", handleSad);
+document.getElementById("angryButton").addEventListener("click", handleAngry);
+
+</script>
+</body>
+</html>

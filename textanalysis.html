@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Analysis</title>
+</head>
+<body>
+
+  <h2>Text Analysis</h2>
+  <textarea id="textInput" rows="5" cols="50"></textarea>
+  <br>
+  <button onclick="analyzeText()">Submit</button>
+
+  <script>
+    function analyzeText() {
+      const textInput = document.getElementById('textInput').value;
+      const characters = textInput.length;
+      const words = textInput.match(/\b\w+\b/g).length;
+      const lines = textInput.split('\n').filter(line => line.trim() !== '').length;
+
+      const message = `Number of characters: ${characters}\nNumber of words: ${words}\nNumber of lines: ${lines}`;
+      alert(message);
+    }
+  </script>
+
+</body>
+</html>

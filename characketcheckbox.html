@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Limit with Checkbox</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>Character Limit with Checkbox</h2>
+  <textarea id="textInput" rows="5" cols="50"></textarea>
+  <br>
+  <input type="checkbox" id="checkbox"> Enable Character Limit
+  <br>
+  <button id="submitButton" disabled>Submit</button>
+
+  <script>
+    $(document).ready(function() {
+      $('#textInput').on('input', function() {
+        if ($('#checkbox').is(':checked')) {
+          const maxLength = 4; // Change the character limit as needed
+          const textLength = $(this).val().length;
+          if (textLength > maxLength) {
+            $(this).val($(this).val().substring(0, maxLength));
+          }
+          // Update character count
+          $('#charCount').text(textLength + '/' + maxLength);
+        }
+
+        // Enable/disable submit button based on textarea content
+        if ($(this).val().trim() === '') {
+          $('#submitButton').prop('disabled', true);
+        } else {
+          $('#submitButton').prop('disabled', false);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

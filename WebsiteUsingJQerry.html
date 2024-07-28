@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Selectors</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="content">
+    <p>Hello, World!</p>
+    <button id="btn">Click me</button>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      // Select paragraph element
+      var paragraph = $("p");
+      console.log(paragraph.text()); // Output: Hello, World!
+
+      // Select button element and add click event
+      $("#btn").click(function(){
+        alert("Button clicked!");
+      });
+    });
+  </script>
+</body>
+</html>

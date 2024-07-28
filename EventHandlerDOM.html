@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handlers</title>
+</head>
+<body>
+  <button id="myButton">Click me</button>
+
+  <script>
+    // Get reference to the button element
+    var button = document.getElementById("myButton");
+
+    // Define event handler function
+    function handleClick() {
+      alert("Button clicked!");
+    }
+
+    // Assign event handler to the button
+    button.onclick = handleClick;
+  </script>
+</body>
+</html>

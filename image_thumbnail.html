@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="image1.jpg" height="240px" width="240px" id="mainimage">
+    <br>
+    <div id="thumbnaildiv">
+        <img src="image2.jpg" height="100px" width="100px" class="thumbnail">
+        <img src="image1.jpg" height="100px" width="100px" class="thumbnail">
+        <img src="image3.jpg" height="100px" width="100px" class="thumbnail">
+    </div>
+    <script>
+        let thumbnails=document.querySelectorAll('.thumbnail');
+        let mainimage=document.getElementById("mainimage")
+        for(let i=0;i<thumbnails.length;i++){
+            thumbnails[i].addEventListener("click",function(){
+                mainimage.src=this.src
+            })
+        }
+    </script>
+</body>
+</html>

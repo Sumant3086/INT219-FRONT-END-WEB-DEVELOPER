@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    .thumbnails img {
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .main-image {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <div class="thumbnails">
+    <img src="image1.jpg" onclick="showImage('image1.jpg')" alt="Thumbnail 1">
+    <img src="image2.jpg" onclick="showImage('image2.jpg')" alt="Thumbnail 2">
+    <img src="image3.jpg" onclick="showImage('image3.jpg')" alt="Thumbnail 3">
+    <img src="image4.jpg" onclick="showImage('image4.jpg')" alt="Thumbnail 4">
+    <img src="image5.jpg" onclick="showImage('image5.jpg')" alt="Thumbnail 5">
+    <img src="image6.jpg" onclick="showImage('image6.jpg')" alt="Thumbnail 6">
+    <img src="image7.jpg" onclick="showImage('image7.jpg')" alt="Thumbnail 7">
+    <img src="image8.jpg" onclick="showImage('image8.jpg')" alt="Thumbnail 8">
+  </div>
+  <div class="main-image">
+    <img id="mainImage" src="image1.jpg" alt="Main Image">
+  </div>
+
+  <script>
+    function showImage(imageSrc) {
+      document.getElementById("mainImage").src = imageSrc;
+    }
+  </script>
+</body>
+</html>

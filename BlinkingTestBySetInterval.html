@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blinking Text</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p id="blinkingText">This text is blinking!</p>
+
+<script src="script.js"></script>
+<script>
+    $(document).ready(function() {
+  // Function to toggle visibility of the text
+  function toggleText() {
+    $('#blinkingText').toggle();
+  }
+
+  // Set interval to toggle visibility every 500 milliseconds (half a second)
+  var interval = setInterval(toggleText, 500);
+
+  // Stop blinking after 5 seconds (5000 milliseconds)
+  setTimeout(function() {
+    clearInterval(interval);
+    $('#blinkingText').show(); // Ensure text is visible after stopping blinking
+  }, 5000);
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table with jQuery</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+      <th>Column 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1, Column 1</td>
+      <td>Row 1, Column 2</td>
+      <td>Row 1, Column 3</td>
+    </tr>
+    <tr>
+      <td>Row 2, Column 1</td>
+      <td>Row 2, Column 2</td>
+      <td>Row 2, Column 3</td>
+    </tr>
+    <!-- Add more rows here if needed -->
+  </tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script>
+    $(document).ready(function() {
+  // Select all odd rows and change background color to green
+  $('#myTable tbody tr:nth-child(odd)').css('background-color', 'green');
+  
+  // Select all even rows and change background color to yellow
+  $('#myTable tbody tr:nth-child(even)').css('background-color', 'yellow');
+});
+
+</script>
+</body>
+</html>
